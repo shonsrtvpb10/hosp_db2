@@ -1,0 +1,29 @@
+{% include "header.html" %}
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('https://images.unsplash.com/photo-1470092306007-055b6797ca72?ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>Database Security</h1>
+            <span class="subheading">An attempt to secure the confidential information</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+{#adding a new patient part come here#}
+        {% if current_user.id ==1: %}
+        <div class="clearfix">
+          <a class="btn btn-primary float-right" href="{{url_for('add')}}">Create New Entry For Patient</a>
+        </div>
+      {% endif %}
+      </div>
+    </div>
+  </div>
+  <hr>
+
+{% include "footer.html" %}
